@@ -14,13 +14,12 @@ int main(int argc, char *argv[])
         n = 6;
     }
 
-
     if (id != 0)
     {
         wait(2);
     }
-    
-    for (int i=n;i<n+5; i++)
+    int i;    
+    for (i=n;i<n+5; i++)
     {
         printf("%d ",i);
         fflush(stdout);

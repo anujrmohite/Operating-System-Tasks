@@ -1,7 +1,9 @@
 #include<stdio.h>
+#include<string.h>
 #include<stdlib.h>
 #include<unistd.h>
 #include<sys/wait.h>
+#include<errno.h>
 /*
 int fd[2];
 fd[0] -- read 
@@ -28,6 +30,10 @@ int main(int argc , char *argv[])
 		return 1;
 	} 
 	int id = fork();
+	if (id == -1)
+	{
+		printf("An err occured while opening pipe\n");
+	}
 	if (id == 0)
 	{
 		close(fd[0]);
@@ -52,7 +58,7 @@ int main(int argc , char *argv[])
 		y = y*3;
 		close(fd[0]);
 		printf("got from child proces %d\n",y);
-	}
+	} 
 	return 0;
 
 }

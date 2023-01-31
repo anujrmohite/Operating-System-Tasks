@@ -3,6 +3,9 @@
 #include<unistd.h>
 #include<string.h>
 #include<sys/wait.h>
+/*
+ * it basically stores the values associated with the address variable to the wait() fucntio call in the compiler stage
+ * */
 int main(int argc, char *argv[])
 {
     int id = fork();

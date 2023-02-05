@@ -10,5 +10,6 @@ int main(int argc, char *argv[])
 {
     execlp("ping","ping","-c",3,"google.com",NULL);
     printf("Success!");
+    printf("the operation is done...>");
     return 0;
 }
